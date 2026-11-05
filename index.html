@@ -9,14 +9,12 @@
 <body>
 <div class="container">
 
-<!-- cabeçalho: diz onde o usuário está e pra que serve a tela (heurística 2 e 6) -->
 <header class="topo">
   <p class="inst">Biblioteca • IFTM</p>
   <h1>Consulta de Obras</h1>
   <p class="resumo">Pesquise no acervo da biblioteca do Instituto Federal do Triângulo Mineiro e descubra se uma obra está cadastrada. Você pode buscar pelo nome do autor, pelo título do livro ou pelo ISBN.</p>
 </header>
 
-<!-- Heurística 1: o status do sistema fica sempre visível aqui -->
 <form id="form" novalidate>
 <fieldset>
   <legend>Pesquisar no acervo</legend>
@@ -25,13 +23,13 @@
 
   <div class="linha">
     <label for="autor">Autor: <small>(quem escreveu o livro)</small></label>
-    <input type="text" id="autor" placeholder="Ex.: Machado de Assis" autocomplete="off">
+    <input type="text" id="autor" placeholder="Ex.: Graciliano Ramos" autocomplete="off">
     <div class="erro" id="erro-autor"></div>
   </div>
 
   <div class="linha">
     <label for="titulo">Título: <small>(nome do livro)</small></label>
-    <input type="text" id="titulo" placeholder="Ex.: Dom Casmurro" autocomplete="off">
+    <input type="text" id="titulo" placeholder="Ex.: Vidas Secas" autocomplete="off">
     <div class="erro" id="erro-titulo"></div>
   </div>
 
@@ -54,7 +52,6 @@
 
 <div id="resultado"><div class="vazio">Os livros encontrados vão aparecer aqui.</div></div>
 
-<!-- Heurística 10: ajuda e documentação -->
 <details>
   <summary>Precisa de ajuda?</summary>
   <ul>

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // "banco de dados" de mentira só pra testar
   var livros = [
     {titulo:"Dom Casmurro", autor:"Machado de Assis", isbn:"9788535902775", ano:1899},
     {titulo:"Memórias Póstumas de Brás Cubas", autor:"Machado de Assis", isbn:"9788535911664", ano:1881},
