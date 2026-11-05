@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fff;
+  --fs: #f2f2f2;
+  --text: #111;
+  --line: #999;
+  --btn: #1a5fb4;
+  --btn-t: #fff;
+  --err: #c01c28;
+  --ok: #26733c;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px 12px;
+}
+
+.container {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+small {
+  color: #777;
+  font-size: 12px;
+}
+
+.topo {
+  background: #2f9e41;
+  color: #fff;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+}
+
+.topo .inst {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.topo h1 {
+  font-size: 20px;
+  margin: 2px 0 6px;
+}
+
+.topo p.resumo {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+fieldset {
+  background: var(--fs);
+  border: 1px solid var(--line);
+  padding: 14px;
+}
+
+legend {
+  padding: 0 6px;
+}
+
+.linha {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid var(--line);
+  font-size: 15px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+input:focus,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--btn);
+}
+
+input.invalido {
+  border: 2px solid var(--err);
+}
+
+.erro {
+  color: var(--err);
+  font-size: 13px;
+  min-height: 16px;
+  margin-top: 2px;
+}
+
+button {
+  padding: 6px 14px;
+  font-size: 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+button.principal {
+  background: var(--btn);
+  color: var(--btn-t);
+  border-color: var(--btn);
+}
+
+button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+#status {
+  margin: 12px 0;
+  padding: 6px 8px;
+  border-left: 4px solid var(--line);
+  font-size: 14px;
+}
+
+#status.ok {
+  border-color: var(--ok);
+}
+
+#status.erro-s {
+  border-color: var(--err);
+  color: var(--err);
+}
+
+#recentes {
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+#recentes a {
+  margin-right: 8px;
+  color: var(--btn);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.vazio {
+  color: #777;
+  font-size: 14px;
+  border: 1px dashed var(--line);
+  padding: 12px;
+}
+
+.livro {
+  border: 1px solid var(--line);
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+details {
+  margin-top: 16px;
+  font-size: 14px;
+}

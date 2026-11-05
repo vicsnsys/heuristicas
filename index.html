@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Biblioteca IFTM - Consulta de Obras</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+<!-- cabeçalho: diz onde o usuário está e pra que serve a tela (heurística 2 e 6) -->
+<header class="topo">
+  <p class="inst">Biblioteca • IFTM</p>
+  <h1>Consulta de Obras</h1>
+  <p class="resumo">Pesquise no acervo da biblioteca do Instituto Federal do Triângulo Mineiro e descubra se uma obra está cadastrada. Você pode buscar pelo nome do autor, pelo título do livro ou pelo ISBN.</p>
+</header>
+
+<!-- Heurística 1: o status do sistema fica sempre visível aqui -->
+<form id="form" novalidate>
+<fieldset>
+  <legend>Pesquisar no acervo</legend>
+
+  <p><small>Digite o que você souber sobre a obra. Não precisa preencher todos os campos, só um já basta.</small></p>
+
+  <div class="linha">
+    <label for="autor">Autor: <small>(quem escreveu o livro)</small></label>
+    <input type="text" id="autor" placeholder="Ex.: Machado de Assis" autocomplete="off">
+    <div class="erro" id="erro-autor"></div>
+  </div>
+
+  <div class="linha">
+    <label for="titulo">Título: <small>(nome do livro)</small></label>
+    <input type="text" id="titulo" placeholder="Ex.: Dom Casmurro" autocomplete="off">
+    <div class="erro" id="erro-titulo"></div>
+  </div>
+
+  <div class="linha">
+    <label for="isbn">ISBN: <small>(código do livro, 10 ou 13 números)</small></label>
+    <input type="text" id="isbn" placeholder="Ex.: 978-85-359-0277-5" maxlength="17" inputmode="numeric" autocomplete="off">
+    <div class="erro" id="erro-isbn"></div>
+  </div>
+
+  <button type="submit" class="principal" id="btnPesquisar">Pesquisar</button>
+  <button type="button" id="btnLimpar">Limpar</button>
+  <button type="button" id="btnCancelar" hidden>Cancelar pesquisa</button>
+  <button type="button" id="btnDesfazer" hidden>Desfazer</button>
+</fieldset>
+</form>
+
+<div id="status" role="status" aria-live="polite">Digite pelo menos um dado da obra e clique em Pesquisar.</div>
+
+<div id="recentes" hidden></div>
+
+<div id="resultado"><div class="vazio">Os livros encontrados vão aparecer aqui.</div></div>
+
+<!-- Heurística 10: ajuda e documentação -->
+<details>
+  <summary>Precisa de ajuda?</summary>
+  <ul>
+    <li>Não sabe o ISBN? Ele fica na contracapa do livro, perto do código de barras.</li>
+    <li>Não precisa digitar o nome completo: “machado” já encontra “Machado de Assis”.</li>
+    <li>Acentos e letras maiúsculas são ignorados.</li>
+    <li>O ISBN aceita hífens, mas só números são permitidos.</li>
+    <li>Clique em uma pesquisa recente para preencher os campos de novo.</li>
+    <li>Use Enter para pesquisar mais rápido.</li>
+  </ul>
+</details>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
